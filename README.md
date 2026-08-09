@@ -57,10 +57,13 @@ You don't need to edit any code to set your region either — pass it via `--reg
 ## Usage
 
 ```bash
-python main.py --profile <your-profile-name> --region <aws-region>
+python main.py --profile cost-auditor --region ca-central-1
 ```
 
-`<your-profile-name>` should be whatever you named your profile in the step above — not a literal value to copy. Both `--profile` and `--region` default to `cost-auditor` and `ca-central-1` respectively, so a bare `python main.py` works if you're using those defaults.
+Optional flags:
+- `--profile` — AWS CLI profile to use (default: `cost-auditor`)
+- `--region` — AWS region to scan (default: `ca-central-1`)
+- `--test-mode` — run without making live AWS calls (if applicable — adjust wording if it behaves differently)
 
 **Options:**
 
