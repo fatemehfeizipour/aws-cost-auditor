@@ -2,7 +2,7 @@
 
 A read-only CLI tool that scans an AWS account for common sources of wasted spend: unattached EBS volumes, idle EC2 instances, S3 buckets without lifecycle policies, and unused Elastic IPs.
 
-Built with Python and `boto3` to demonstrate practical AWS API integration — not just AWS certifications, but the ability to actually query, reason about, and report on live account state.
+Built with Python and `boto3` to demonstrate practical AWS API integration - not just AWS certifications, but the ability to actually query, reason about, and report on live account state.
 
 ## Why this exists
 
