@@ -41,7 +41,7 @@ pip install boto3
 
 ## Configuration
 
-This tool doesn't ship with or require any specific AWS credentials — you use your own. If you don't already have an AWS CLI profile set up, create one:
+This tool doesn't ship with or require any specific AWS credentials - you use your own. If you don't already have an AWS CLI profile set up, create one:
 
 ```bash
 aws configure --profile <your-profile-name>
