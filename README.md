@@ -52,7 +52,25 @@ You'll be prompted for your AWS access key, secret key, and default region. Thes
 
 The tool defaults to a profile named `cost-auditor` and region `ca-central-1` — either name your profile `cost-auditor` to use the defaults, or pass your own profile name via `--profile` (see Usage below).
 
-You don't need to edit any code to set your region either — pass it via `--region` on each run. The `ca-central-1` default only applies if you omit the flag.
+You don't need to edit any code to set your region either - pass it via `--region` on each run. The `ca-central-1` default only applies if you omit the flag.
+
+## Running with Docker
+
+This tool is also available as a Docker image, so you don't need Python or boto3 installed locally.
+
+### Build the image
+
+    docker build -t aws-cost-auditor .
+
+### Run it
+
+AWS credentials are never baked into the image. Instead, mount your local `~/.aws` folder into the container at runtime so the tool reads your credentials the same way it would outside Docker:
+
+    docker run --rm -v ${HOME}/.aws:/root/.aws aws-cost-auditor --profile cost-auditor --region ca-central-1
+
+### Pull the pre-built image
+
+    docker pull fatemehfeyzipour/aws-cost-auditor
 
 ## Usage
 
